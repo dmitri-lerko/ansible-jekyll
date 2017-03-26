@@ -1,0 +1,9 @@
+---
+
+- name: build jekyll
+  command: jekyll build
+  args:
+    chdir: "{{ jekyll_blog_root_dir }}"
+
+- name: upload blog to S3
+  command: "aws s3 cp {{ jekyll_blog_root_dir }}/_deploy/ s3://{{ bucket_name }}/ --recursive"

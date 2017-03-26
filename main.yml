@@ -1,0 +1,5 @@
+- name: upload deploy.live to S3
+  hosts: localhost
+  remote_user: root
+  roles:
+    - { role: deploy-live-s3, tags: [ 'deploy-live-s3' ] }
