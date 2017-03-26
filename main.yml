@@ -2,4 +2,4 @@
   hosts: localhost
   remote_user: root
   roles:
-    - { role: deploy-live-s3, tags: [ 'deploy-live-s3' ] }
+    - { role: deploy-jekyll-s3, tags: [ 'deploy-live-s3' ] }
